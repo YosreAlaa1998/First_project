@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FA6B6666">
+
+
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="log in"
+
+        app:layout_constraintEnd_toEndOf="@+id/sign_up"
+        app:layout_constraintStart_toStartOf="@+id/sign_up"
+        app:layout_constraintTop_toBottomOf="@+id/remember_text" />
+
+    <Button
+        android:id="@+id/sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="sign up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/log_in" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:background="#fff"
+        android:textColor="#fff"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/passward_edit" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="13dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="enter your account"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/name_text"
+        app:layout_constraintTop_toTopOf="@+id/name_text" />
+
+    <EditText
+        android:id="@+id/passward_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="13dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="enter passward"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/passward_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/passward_text"
+        app:layout_constraintTop_toTopOf="@+id/passward_text"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="223dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="114dp"
+        android:layout_height="189dp"
+        android:gravity="center"
+        android:text="hello \n world !!"
+        android:textColor="#328DF0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/passward_text"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Passward"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/barrier"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="user_name"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/barrier"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/remember_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="remember me"
+        android:textColor="#fff"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/checkBox"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="passward_edit,editText,checkBox"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
